@@ -5,10 +5,6 @@ RUN /usr/bin/python3 -m pip install --upgrade pip
 RUN /usr/bin/python3 -m pip install ansible
 RUN PATH=$PATH:$HOME/.local/bin/
 RUN ansible-galaxy collection install google.cloud
-COPY ansible.cfg /ansible/ansible.cfg
-COPY inventory.gcp.yaml /ansible/inventory.gcp.yaml
-COPY example_playbook.yaml /ansible/example_playbook.yaml
-RUN chmod -R 666 /ansible/*
 
 # To trigger a rebuild of your Cloud Shell image:
 # 1. Commit your changes locally: git commit -a
