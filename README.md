@@ -1,0 +1,1 @@
+# cloudshell_automation_image
